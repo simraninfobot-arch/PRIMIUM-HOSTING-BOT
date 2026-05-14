@@ -1,0 +1,59 @@
+{
+  "name": "Telegram Hosting Bot",
+  "description": "Deploy your Telegram bot on any platform",
+  "repository": "https://github.com/yourusername/telegram-hosting-bot",
+  "keywords": ["telegram", "bot", "hosting", "python"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token (@BotFather se milega)",
+      "required": true
+    },
+    "ADMIN_ID_1": {
+      "description": "Apna Telegram User ID",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Owner ka Telegram User ID",
+      "required": true
+    },
+    "GROUP_ID": {
+      "description": "Telegram Group ID",
+      "required": false,
+      "value": "0"
+    },
+    "GITHUB_TOKEN": {
+      "description": "GitHub Personal Access Token",
+      "required": false
+    },
+    "GITHUB_REPO": {
+      "description": "GitHub repo (username/reponame)",
+      "required": false
+    },
+    "REQUIRED_CHANNEL": {
+      "description": "Channel link (https://t.me/...)",
+      "required": false,
+      "value": "https://t.me/yourchannel"
+    },
+    "REQUIRED_CHANNEL_ID": {
+      "description": "Channel ID (-100...)",
+      "required": false,
+      "value": "0"
+    },
+    "PORT": {
+      "description": "Server port",
+      "required": false,
+      "value": "8080"
+    },
+    "WEBHOOK_URL": {
+      "description": "Webhook URL (blank = polling mode)",
+      "required": false,
+      "value": ""
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
